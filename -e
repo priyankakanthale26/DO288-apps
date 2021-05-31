@@ -1,0 +1,21 @@
+--> Found container image 60726b3 (19 months old) from registry.access.redhat.com for "registry.access.redhat.com/rhscl/mysql-57-rhel7"
+
+    MySQL 5.7 
+    --------- 
+    MySQL is a multi-user, multi-threaded SQL database server. The container image provides a containerized packaging of the MySQL mysqld daemon and client application. The mysqld server daemon accepts connections from clients and provides access to content from MySQL databases on behalf of the clients.
+
+    Tags: database, mysql, mysql57, rh-mysql57
+
+    * An image stream tag will be created as "tododb:latest" that will track this image
+    * This image will be deployed in deployment config "tododb"
+    * Port 3306/tcp will be load balanced by service "tododb"
+      * Other containers can access this service through the hostname "tododb"
+
+--> Creating resources ...
+    imagestream.image.openshift.io "tododb" created
+    deploymentconfig.apps.openshift.io "tododb" created
+    service "tododb" created
+--> Success
+    Application is not exposed. You can expose services to the outside world by executing one or more of the commands below:
+     'oc expose svc/tododb' 
+    Run 'oc status' to view your app.
